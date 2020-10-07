@@ -14,7 +14,7 @@ df_filtro = df[['Entrada', 'Dia/hora', 'Quantidade de pessoas']]  ##seleção de
 
 print (df_filtro['Quantidade de pessoas'].mean())
 
-#df_filtro.plot.bar(x='Dia/hora', y='Quantidade de pessoas')
+df_filtro.plot.bar(x='Dia/hora', y='Quantidade de pessoas')
 
 
 
