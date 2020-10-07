@@ -12,7 +12,7 @@ print(pessoas)
 
 mensagem = {
     'Entrada': 'Porta Principal',
-    'Quantidade': pessoas
+    'Quantidade de pessoas': pessoas
    }
 
 mqtt_client.publish('ProjetoIN242', json.dumps(mensagem))
