@@ -10,11 +10,11 @@ query = mongo_collection.find({})
 
 df = pd.DataFrame.from_records(query)
 
-df_filtro = df[['Entrada', 'Dia/hora', 'Quantidade de pessoas']]  ##seleção de colunas
+df_filtro = df[['Entrada', 'Dia', 'Quantidade de pessoas']]  ##seleção de colunas
 
-print (df_filtro['Quantidade de pessoas'].mean())
+df_filtro.groupby('Dia')['Quantidade de pessoas'].mean()
 
-df_filtro.plot.bar(x='Dia/hora', y='Quantidade de pessoas')
+df_filtro.plot.bar (x='Dia', y='Quantidade de pessoas')
 
 
 
